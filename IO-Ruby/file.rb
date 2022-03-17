@@ -16,6 +16,10 @@
 
 #Now We will rename file using rename method
 #File.rename("IO-Ruby/data.txt", "IO-Ruby/dataUpdated.txt");
-file = File.open("IO-Ruby/dataUpdated.txt", "r") {|f| puts f.read; f.close}
-File.delete("IO-Ruby/dataUpdated.txt")
+# file = File.open("IO-Ruby/dataUpdated.txt", "r") {|f| puts f.read; f.close}
+# File.delete("IO-Ruby/dataUpdated.txt")
 
+#Creating a new file
+myFile = File.new("IO-Ruby/data.txt", "w")
+myFile.write("Some dummy data in a file")
+myFile.close
